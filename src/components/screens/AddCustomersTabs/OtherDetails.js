@@ -215,9 +215,9 @@ const customerAttitudes = [
   { label: 'Option 4', value: 'Option 4' },
 ];
 
-const OtherDetails = ({ formData, handleFieldChange }) => {
+const OtherDetails = ({route}) => {
   
-
+  const {formData, handleFieldChange } = route.params;
   const [languages, setLanguages] = useState([]);
   const [currencies, setCurrencies] = useState([]);
 

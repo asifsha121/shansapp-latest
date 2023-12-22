@@ -290,7 +290,8 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, Modal 
 import { Dropdown } from 'react-native-element-dropdown';
 import { getRoleData } from '../../../api/CustomerCreationAPI';
 
-const ContactPerson = ({contactPersonFormdata, setContactPersonFormdata}) => {
+const ContactPerson = ({route}) => {
+  const {contactPersonFormdata, setContactPersonFormdata} = route.params;
   const [isModalVisible, setModalVisible] = useState(false);
   const [isModalVisible1, setModalVisible1] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(null);

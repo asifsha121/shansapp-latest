@@ -202,8 +202,8 @@ import axios from 'axios';
 import { baseUrl } from '../../../api/const';
 
 
-const Address = ({ formData, handleFieldChange }) => {
-
+const Address = ({ route }) => {
+  const {formData, handleFieldChange } = route.params;
   const [countries, setCountries] = useState([]);
   const [states, setStates] = useState([]);
   const [areas, setAreas] = useState([]);

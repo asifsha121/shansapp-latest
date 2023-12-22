@@ -251,7 +251,8 @@ const typeCustomer = [
   { label: 'B2C', value: 'B2C' },
 ];
 
-const Details = ({ setFormData, handleFieldChange }) => {
+const Details = ({ route }) => {
+  const {formData, handleFieldChange } = route.params;
   const [showDropdown, setShowDropdown] = useState(false);
   const [employeeData, setEmployeeData] = useState([]);
   

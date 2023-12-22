@@ -91,10 +91,25 @@ const AddCustomer = ({ navigation }) => {
           scrollEnabled: true,
           labelStyle: { fontSize: 16, textTransform: 'none' }
         }}>
-        <Tab.Screen name="Details" component={Details}/>
-        <Tab.Screen name="Other  Details" component={OtherDetails}/>
-        <Tab.Screen name="Address" component={Address} />
-        <Tab.Screen name="Contact Person" component={ContactPerson} />
+              <Tab.Screen
+              name="Details"
+              component={Details}
+              initialParams={{ formData, handleFieldChange }}
+            /><Tab.Screen
+              name="Other Details"
+              component={OtherDetails}
+              initialParams={{ formData, handleFieldChange }}
+            />
+            <Tab.Screen
+              name="Address"
+              component={Address}
+              initialParams={{formData, handleFieldChange }}
+            />
+            <Tab.Screen
+              name="Contact Person"
+              component={ContactPerson}
+              initialParams={{ contactPersonFormdata, setContactPersonFormdata }}
+            />
       </Tab.Navigator>
       <TouchableOpacity style={styles.buttonsubmit} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Submit</Text>
